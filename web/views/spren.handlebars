@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<div class="container">
+    <p></p>
+    <h1> {{title}} </h1>
+
+    <h5><a href="/">Go back to the home page</a></h5>
+    <p></p>
+
+    <h4>Add Spren</h4>
+
+    <div class="box">
+        <div class="subtitle is-5"></div>
+        <form id="addspren" action="/spren" method="post">
+
+            <!-- get spren type -->
+            <div class="field">
+                <label class="label">Type</label>
+                <input class="input" type="text" name="type" placeholder="Rotspren">
+            </div>
+
+             <!-- get spren name  -->
+            <div class="field">
+                <label class="label">Name</label>
+                <input class="input" type="text" name="name" placeholder="">
+            </div>
+
+            <!-- Submit -->
+            <div class="field">
+                <input class="button is-info" type="submit" value="Submit">
+            </div>
+
+        </form>  
+    </div>
+
+    <table class="table is-bordered is-striped is-fullwidth table-striped">
+        <thead class="thead-dark"> 
+            <th>Type</th> 
+            <th>Name</th> 
+            <th></th>
+            <th></th>
+        </thead> 
+        <tbody> 
+            {{#each results}} 
+            <tr> 
+                <td>{{this.type}}</td> 
+                <td>{{this.name}}</td> 
+                <td><a href="/spren/{{this.id}}">Update</a></td>
+                <td>
+                    <a href="/deleteSpren/{{this.id}}">
+                        <input type="button" value="Delete">
+                    </a>
+                </td>
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table> 
+</div>

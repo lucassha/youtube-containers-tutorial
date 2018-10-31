@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<div class="container">
+	<p></p>
+	<h1> {{title}} </h1>
+
+	<h5><a href="/">Go back to the home page</a></h5>
+	<p></p>
+
+	<form action="/addKnightRadiant/">
+		<fieldset>
+			<legend>Add Spren to a Character (creating a Knight Radiant)</legend>
+			<input type="submit" value="Add">
+			<label>Character:</label>
+			<select name="characterID" >
+			{{#each character}}
+				<option name="{{this.first_name}}" value="{{this.id}}">{{this.first_name}}</option>
+			{{/each}}
+			</select>
+			<label>Spren:</label>
+			<select name="sprenID">
+				{{#each spren}}
+				<option name="{{this.type}}" value="{{this.id}}">{{this.type}} - {{this.name}}</option>
+				{{/each}}
+			</select>
+		</fieldset>
+	</form>
+
+	<p></p>
+
+	<table class="table is-bordered is-striped is-fullwidth table-striped">
+	    <thead class="thead-dark"> 
+	        <th>Character</th> 
+	        <th>Spren</th> 
+	        <th>Spren Type</th>
+	        <th>KR Order</th>
+	    </thead> 
+	    <tbody> 
+	        {{#each results}} 
+	        <tr> 
+	            <td>{{this.first_name}}</td> 
+	            <td>{{this.name}}</td>
+	            <td>{{this.type}}</td> 
+	            <td>{{this.kr_order}}</td>	
+	        </tr> 
+	        {{/each}} 
+	    </tbody> 
+	</table>
+</div>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<div class="homepage">
+	<p></p>
+	<div class="container">
+		<p></p>
+		<h1 class="title">{{title}}</h1>
+
+		<p>Thanks Brandon Sanderson</p>
+		<ul>
+			<li><a href="/characters">Characters</a></li>
+			<li><a href="/spren">Spren</a></li>
+			<li><a href="/ability">Ability</a></li>
+			<li><a href="/allegiance">Allegiances</a></li>
+			<li><a href="/characterAllegiance">Character Allegiance (Many-to-many)</a></li>
+			<li><a href="/characterAbility">Character Abilities (Many-to-many)</a></li>
+			<li><a href="/knightsradiant">Knights Radiant (Add Spren to Character)</a></li>
+		</ul>
+		<p>Project by Shannon Lucas and Neal Quigley</p>
+
+		<form action="/byAbility">
+			<fieldset>
+				<legend>Search by ability for characters</legend>
+				<input type="submit" value="search">
+				<label>Find all characters with the ability:</label>
+				<select name="id" >
+				{{#each ability}}
+					<option name="{{this.type}}" value="{{this.id}}">{{this.type}}</option>
+				{{/each}}
+				</select>
+			</fieldset>
+		</form>
+
+		<form action="/byAllegiance">
+			<fieldset>
+				<legend>Search by allegiance for characters</legend>
+				<input type="submit" value="search">
+				<label>Find all characters with the allegiance:</label>
+				<select name="id" >
+				{{#each allegiance}}
+					<option name="{{this.name}}" value="{{this.id}}">{{this.name}}</option>
+				{{/each}}
+				</select>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <hr>
+
+<h3>testing stuff below here on how to output data</h3>
+
+<hr> -->
+
+
+<!-- <p>{{context.results}}</p> -->
+<!-- this display the entire result which is json data -->
+
+<!-- <p>{{results}}</p> -->
+<!-- this will only display [object Object] -->
+
+
+<!-- <ul>
+	<li>Seeing if results.id works by itself</li>
+	why does this not work? not narrowed down enough?
+	<li>After results.id</li>
+</ul>
+
+<hr>
+
+{{#each results}}
+	<li>{{id}}: {{first_name}} {{last_name}}</li>
+{{/each}}
+
+<hr> -->
+
+<!-- {{#each results.row}}
+	<li>this.first_name</li>
+{{/each}} -->
+<!-- this doesn't work at all -->
+

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<div class="container">
+    <p></p>
+    <h2>{{title}}</h2>
+    <h5><a href="/">Go back to the home page</a></h5>
+    <p></p>
+
+    <table class="table is-bordered is-striped is-fullwidth table-striped">
+        <thead class="thead-dark"> 
+            <th>Character Name</th> 
+            <th>Ability</th> 
+        </thead> 
+        <tbody> 
+            {{#each results}} 
+            <tr> 
+                <td>{{this.first_name}}</td> 
+                <td>{{this.type}}</td> 
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table> 
+</div>
