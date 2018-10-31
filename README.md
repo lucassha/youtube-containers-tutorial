@@ -1,2 +1,4 @@
-# youtube-containers-tutorial
-tutorial on how to get nodejs up and running with mysql and docker-compose
+
+## Docker-compose starting point
+
+Use this branch to compare your web-app to the final product
