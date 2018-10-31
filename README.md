@@ -1,4 +1,3 @@
-# youtube-containers-tutorial
 
 ## Docker-compose starting point
 
