@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  db:
+    build: ./db
+  web:
+    build: ./web
+    ports:
+      - "3257:3257"
+    depends_on:
+      - db
+    restart: on-failure 
